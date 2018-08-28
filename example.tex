@@ -1,0 +1,37 @@
+% Use lualatex or xelatex, since the template requires fontspec:
+%!TEX program = lualatex
+
+\documentclass{beamer}
+
+\usetheme{labss}
+
+\title{
+  \texorpdfstring{
+    % A formatted version of the title to show on screen:
+    {\textcolor{black!25}{\hrule}}\vspace{4pt}
+    The~LABSS~Beamer~template:\\\huge an example
+    \vspace{6pt}{\textcolor{black!25}{\hrule}}
+  }{
+    % A plain version of the title for the PDF file
+    The LABSS Beamer template: an example
+  }
+}
+
+\date{\today}
+\author{Nicolas Payette}
+\institute{Laboratory of Agent-Based Social Simulation, ISTC, CNR}
+
+\titlegraphic{\logos} % the \logos command is provided by the template
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}[fragile]{This is a frame}
+  % The frame need to be [fragile] to use the \verb command.
+  \huge We have defined the \verb+\hl+ command for \hl{highlighting text}\ldots
+  \par\vfill\hfill
+  \normalsize\ldots and the \verb+\nt+ command \nt{for more subtle, discrete notes}.
+\end{frame}
+
+\end{document}
